@@ -28,8 +28,15 @@
 
 h1,
 h2,
+h3,
 p {
   margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 h1:last-child,
@@ -37,7 +44,26 @@ h2:last-child,
 h3:last-child,
 h4:last-child,
 p:last-child {
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .address {
@@ -111,7 +137,7 @@ p:last-child {
 /* Header */
 .header {
   background-color: var(--light-background);
-  padding: 20px;
+  padding: 24px 0;
   border-bottom: 1px solid #ececec;
 }
 
@@ -126,7 +152,7 @@ p:last-child {
   margin-left: auto;
 }
 
-.header-mail {
+.header-contacts-mail {
   margin-right: 50px;
 }
 
@@ -184,13 +210,14 @@ p:last-child {
 .hero {
   background-color: var(--dark-background);
   text-align: center;
-}
-
-.hero-container {
-  padding: 200px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
+  width: 696px;
+  margin-right: auto;
+  margin-left: auto;
   font-family: var(--main-font);
   font-weight: 900;
   font-size: 44px;
@@ -204,7 +231,6 @@ p:last-child {
 .hero-button-order {
   width: 200px;
   height: 50px;
-  margin-top: 30px;
   padding: 0;
   font-family: var(--main-font);
   font-weight: 700;
@@ -229,6 +255,10 @@ p:last-child {
   margin-right: 30px;
 }
 
+.benefits-item:last-child {
+  margin: 0;
+}
+
 .benefits-item-title {
   font-family: var(--main-font);
   font-weight: 700;
@@ -236,6 +266,7 @@ p:last-child {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 
   color: var(--primary-dark-txt);
 }
@@ -297,8 +328,8 @@ p:last-child {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
-  padding-bottom: 30px;
 }
+
 .team-list-item:last-child {
   margin: 0;
 }
@@ -315,13 +346,17 @@ p:last-child {
   color: var(--primary-dark-txt);
 }
 
+.worker-div {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .worker-name {
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  margin: 30px 0 0 0;
 
   color: var(--primary-dark-txt);
 }
@@ -355,7 +390,7 @@ p:last-child {
   color: var(--primary-light-txt);
 }
 
-.address-list {
+.address {
   margin-top: 20px;
 }
 
@@ -385,10 +420,6 @@ p:last-child {
 
 /* Portfolio */
 
-.hero-section {
-  display: flex;
-}
-
 .hero-button-flex {
   display: flex;
   justify-content: center;
@@ -396,8 +427,15 @@ p:last-child {
   margin-bottom: 50px;
 }
 
-.hero-button {
+.hero-list {
   margin-right: 8px;
+}
+
+.hero-list:last-child {
+  margin: 0;
+}
+
+.hero-button {
   padding: 6px 22px;
   height: 38px;
   font-family: var(--main-font);
@@ -426,19 +464,28 @@ p:last-child {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 34px;
 }
 
 .projects-list-item {
   margin-right: 30px;
   margin-bottom: 30px;
-  margin-top: 0;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
+}
+
+.projects-list-item:nth-child(n + 6) {
+  margin-bottom: 0;
 }
 
 .projects-list-item:nth-child(3n) {
   margin-right: 0;
+}
+
+.projects-item-div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 
 .projects-item-customer {
@@ -447,9 +494,7 @@ p:last-child {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-top: 20px;
   margin-bottom: 4px;
-  padding-left: 20px;
 
   color: var(--primary-dark-txt);
 }
@@ -459,7 +504,6 @@ p:last-child {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  padding-left: 20px;
 
   color: var(--secondary-ligth-txt);
 }
