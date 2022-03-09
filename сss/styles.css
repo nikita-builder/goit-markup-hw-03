@@ -251,11 +251,7 @@ img {
   margin-right: 30px;
 }
 
-.benefits-item {
-  margin-right: 30px;
-}
-
-.benefits-item:last-child {
+.benefits-list:last-child {
   margin: 0;
 }
 
@@ -354,7 +350,7 @@ img {
 .worker-name {
   font-family: var(--main-font);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.14;
   letter-spacing: 0.03em;
 
@@ -363,7 +359,7 @@ img {
 
 .worker-profession {
   font-family: var(--main-font);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   margin-top: 10px;
@@ -483,6 +479,7 @@ img {
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
+  padding-right: 24px;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
